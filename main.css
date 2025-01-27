@@ -641,6 +641,50 @@ form div {
     align-self: stretch;
 }
 
+.header-buttons img {
+    display: none;
+}
+.header-buttons {
+    max-width: 320px;
+    width: 100%;
+}
+.header-buttons button:first-child {
+    display: flex;
+    padding: 16px 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 10px;
+    background: #FFF;
+    width: 100%;
+    color: #414651;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px; /* 155.556% */
+border: none;
+}
+
+.header-buttons button:last-child {
+    display: flex;
+padding: 16px 22px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 10px;
+background: #7F56D9;
+width: 100%;
+color: #FFF;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px; /* 155.556% */
+border: none;
+}
+
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .burger {
         display: flex;
