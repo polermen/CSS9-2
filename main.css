@@ -10,7 +10,6 @@ a {
 
 body {
     display: flex;
-    max-width: 1440px;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -185,7 +184,7 @@ button:hover {
 
 .header-image {
     display: flex;
-    max-width: 1280px;
+    max-width: auto;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -688,9 +687,151 @@ form div {
     .fourth-container {
         flex-direction: column;
     }
+    .header-image {
+        position: relative;
+        width: 100%;
+        height: 230px;
+        overflow: hidden; /* Crop any overflowing content */
+        
+    }
+    .header-image img {
+        position: absolute;
+        width: 100%;
+        object-fit: cover; /* Ensures the image covers the container */
+    }
 }
 
 @media screen and (max-width: 767px) {
+    body {
+        width: 100%;
+        background-color: red;
+    }
+    header {
+        width: 100%;
+    }
+    .header-container-text-upper div:first-child h1 {
+        color: #FFF;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 44px; /* 122.222% */
+    letter-spacing: -0.72px;
+    text-align: left;
+    }
+    .header-container-text-upper div:last-child p {
+        color: #E9D7FE;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+        text-align: left;
+    }
+    .header-container-text-upper div {
+        padding: 0px 16px;
+    }
+    .header-container-text-upper div:first-child p {
+        color: #E9D7FE;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+text-align: left;
+    }
+    .header-image {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        overflow: hidden; /* Crop any overflowing content */
+    }
+    .header-image img {
+        position: absolute;
+        width: 100%;
+        object-fit: cover; /* Ensures the image covers the container */
+    }
+    .second-container-right {
+        gap: 48px;
+        max-width: 320px;
+    }
+    .second-container {
+        flex-direction: column;
+        max-width: 360px;
+        width: 100%;
+    }
+    .second-container-background {
+        padding: 0 16px;
+        max-width: 320px;
+    }
+    .text-card {
+        min-width: unset;
+        max-width: 320px;
+        width: 100%;
+        flex: unset;
+    }
+    .text-card h3 {
+        color: #181D27;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 155.556% */
+    }
+    .text-card p {
+        color: #535862;
+font-family: Inter;
+font-size: var(--Font-size-text-md, 16px);
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+    }
+    .third-container {
+        max-width: 320px;
+        width: 100%;
+    }
+    .third-container-left {
+        min-width: unset;
+    }
+    .third-container-left h2 {
+        color: #181D27;
+font-family: Inter;
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: 38px; /* 126.667% */
+    }
+    .third-container-left > p {
+        color: #535862;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 155.556% */
+    }
+    .third-container-right img {
+        max-width: 288px;
+    }
+    .third-container-right {
+        align-items: center;
+    }
+    .third-container {
+        padding: 64px 16px;
+    }
+    .fourth-container-left h2 {
+        color: #FFF;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px; /* 133.333% */
+    }
+    .fourth-container-left {
+        padding: 40px 24px;
+    }
+    form div {
+        flex-direction: column;
+    }
     .burger {
         display: flex;
     }
@@ -705,10 +846,6 @@ form div {
         padding-left: 12px;
     }
     .first-container {
-        padding-right: 32px;
-        padding-left: 32px;
-    }
-    .second-container-background {
         padding-right: 32px;
         padding-left: 32px;
     }
@@ -739,9 +876,6 @@ form div {
     .header-buttons {
         flex-direction: column;
     }
-    .header-container {
-        padding: 0px 16px;
-    }
     .logo-cards {
         display: flex;
         flex-direction: column;
@@ -749,13 +883,7 @@ form div {
         gap: 16px;
         align-self: stretch;
     }
-    .second-container {
-        flex-direction: column;
-    }
-    .second-container-left {
-        margin-right: auto;
-        padding-left: 16px;
-    }
+    
     .third-container-right {
         flex-direction: column;
         gap: 16px;
